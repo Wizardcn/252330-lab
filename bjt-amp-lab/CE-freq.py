@@ -17,7 +17,7 @@ def main():
         vout.append(20 * np.log10(pos_data))
 
     vout = np.array(vout)
-    freq = rawdata.get_frequency() * 1e2
+    freq = rawdata.get_frequency()
 
     # vitualize data
     figure, axis1 = plt.subplots(figsize=(8, 4))
