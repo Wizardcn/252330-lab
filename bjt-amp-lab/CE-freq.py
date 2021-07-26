@@ -11,7 +11,6 @@ def main():
 
     # prepare data
     raw_vout = np.real(rawdata.get_data('V(vout)'))
-    print(raw_vout)
     vout = []
     for data in raw_vout:
         pos_data = -1 * data
