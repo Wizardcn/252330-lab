@@ -15,14 +15,14 @@ def main():
     figure, axis1 = plt.subplots()
 
     axis1.plot(time, vout, color='blue', label='$V_{out}$')
-    axis1.set_ylabel('$V_{out}$(V)')
-    axis1.set_xlabel('time (ms)')
+    axis1.set_ylabel('$V_{out}$ [V]')
+    axis1.set_xlabel('time [ms]')
 
     axis2 = axis1.twinx()
     ymin, ymax = -100, 100
     axis2.set_ylim((ymin, ymax))
     axis2.plot(time, vin, color='red', label='$V_{in}$')
-    axis2.set_ylabel('$V_{in}$(mV)')
+    axis2.set_ylabel('$V_{in}$ [mV]')
 
     align_yaxis(axis1, 0, axis2, 0)
     plt.title('$V_{in}$ - $V_{out}$ Common Emitter Configuration')
