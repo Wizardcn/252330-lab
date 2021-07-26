@@ -1,0 +1,16 @@
+appdirs==1.4.4
+autopep8==1.5.7
+cycler==0.10.0
+distlib==0.3.2
+filelock==3.0.12
+kiwisolver==1.3.1
+ltspice==1.0.1
+matplotlib==3.4.2
+numpy==1.21.0
+Pillow==8.2.0
+pycodestyle==2.7.0
+pyparsing==2.4.7
+python-dateutil==2.8.1
+six==1.16.0
+toml==0.10.2
+virtualenv==20.4.7
