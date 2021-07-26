@@ -30,7 +30,7 @@ def main():
     axis1.yaxis.set_major_formatter(formatter2)
     axis1.plot(freq, vout)
     axis1.set_xlabel('Frequency')
-    # axis1.set_ylabel('')
+    axis1.set_ylabel('Amplifier Gain')
     plt.autoscale(enable=True, axis='x', tight=True)
     axis1.xaxis.grid(True, which="minor", ls="dotted", color='lightgrey')
     axis1.grid(True, which="major", ls="dashed", color='grey')
