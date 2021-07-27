@@ -26,7 +26,7 @@ def main():
     formatter2 = EngFormatter(unit='dB')
     axis1.xaxis.set_major_formatter(formatter1)
     axis1.yaxis.set_major_formatter(formatter2)
-    axis1.plot(freq, vout, linewidth=1, color='#37718e')
+    axis1.plot(freq, vout, linewidth=1, color='#000080')
     axis1.set_xlabel('Frequency')
     axis1.set_ylabel('Amplifier Gain')
     plt.autoscale(enable=True, axis='x', tight=True)
