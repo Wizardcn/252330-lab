@@ -6,7 +6,8 @@ from ltspice import *
 
 def main():
 
-    rawdata = Ltspice(input("Please type your file name: "))
+    rawdata = Ltspice(
+        input("Please type your file name(in ltspice directory): "))
     rawdata.parse()
 
     fig = plt.figure(figsize=(8, 4))
@@ -20,8 +21,8 @@ def main():
     plt.autoscale(enable=True, axis='x', tight=True)
     char_fig.xaxis.grid(True, which="minor", ls="dotted", color='lightgrey')
     char_fig.grid(True, which="major", ls="dashed", color='grey')
-    char_fig.set_ylabel('$I_{C}[mA]$')
-    char_fig.set_xlabel('$V_{CE}[V]$')
+    char_fig.set_ylabel('$I_{C} [mA]$')
+    char_fig.set_xlabel('$V_{CE} [V]$')
     plt.title('$I_{C}$ - $V_{CE}$ characteristics')
     plt.legend(loc='upper left')
 
