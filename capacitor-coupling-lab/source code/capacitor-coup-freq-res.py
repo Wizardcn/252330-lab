@@ -21,7 +21,7 @@ def main():
     # vitualize data
     figure, axis1 = plt.subplots(figsize=(8, 4))
     axis1.set_xscale('log')
-    # axis1.set_title('CE Amplifier Frequency Characteristic')
+    # axis1.set_title('Capacitor Coupling Frequency Response')
     formatter1 = EngFormatter(unit='Hz')
     formatter2 = EngFormatter(unit='dB')
     axis1.xaxis.set_major_formatter(formatter1)
