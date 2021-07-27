@@ -30,3 +30,8 @@
 
 ### Direct Coupling Frequency Response
 ![Direct Coup. Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/direct-coupling-lab/figure/3-2-freq.png?raw=true)
+
+
+```
+print(np.array([0, 1, 3])
+```
