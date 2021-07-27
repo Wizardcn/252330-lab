@@ -18,10 +18,10 @@
 ![CE Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/bjt-amp-lab/figure/1-1-freq.png?raw=true)
 
 ### CB Frequency Characteristic
-![CB Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/bjt-amp-lab/figure/1-2-freq.png?raw=true)
+![CB Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/bjt-amp-lab/figure/1-3(2nd)-freq.png?raw=true)
 
 ### CC Frequency Characteristic
-![CC Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/bjt-amp-lab/figure/1-3(2nd)-freq.png?raw=true)
+![CC Freq. Res.](https://github.com/Wizardcn/252330-lab/blob/master/bjt-amp-lab/figure/1-2-freq.png?raw=true)
 
 ## Lab 2
 
