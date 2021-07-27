@@ -26,7 +26,7 @@ def main():
     plt.legend(loc='upper left')
 
     plt.tight_layout()
-    plt.savefig('graphout.png')
+    plt.savefig('../figure/graphout.png')
     plt.show()
 
 
