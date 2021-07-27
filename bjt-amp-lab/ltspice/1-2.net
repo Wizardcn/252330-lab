@@ -1,4 +1,4 @@
-* C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\252330 lab\bjt-amp-lab\1-2.asc
+* C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\252330 lab\bjt-amp-lab\ltspice\1-2.asc
 Vin Vin 0 SINE(0 10m 1k) AC 1 0
 C1 N002 Vin 10µ
 R1 N002 0 12k
@@ -11,6 +11,7 @@ VCC N001 0 10
 .model NPN NPN
 .model PNP PNP
 .lib C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\lib\cmp\standard.bjt
-.ac dec 10 10 100Meg
+.ac dec 20 1m 100G
+;tran 10m
 .backanno
 .end
