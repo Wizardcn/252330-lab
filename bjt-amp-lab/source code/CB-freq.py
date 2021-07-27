@@ -7,7 +7,6 @@ def main():
     filename = '1-3(2nd).raw'
     rawdata = Ltspice(filename)
     rawdata.parse()
-    print(rawdata.get_data('V(vout)'))
 
     raw_vout = np.absolute(rawdata.get_data('V(vout)'))
     vout = []
