@@ -31,7 +31,7 @@ def main():
     axis1.grid(True, which='major', ls='dashed', color='grey')
 
     plt.tight_layout()
-    plt.savefig(f'./figure/{filename[:-4]}-freq.png')
+    plt.savefig(f'./figure/{filename[10:][:-4]}-freq.png')
     plt.show()
 
 
