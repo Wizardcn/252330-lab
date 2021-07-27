@@ -4,7 +4,7 @@ from matplotlib.ticker import EngFormatter
 
 
 def main():
-    filename = '1-3(2nd).raw'
+    filename = './ltspice/1-3(2nd).raw'
     rawdata = Ltspice(filename)
     rawdata.parse()
 
@@ -18,7 +18,7 @@ def main():
 
     figure, axis1 = plt.subplots(figsize=(8, 4))
     axis1.set_xscale('log')
-    axis1.set_title('CC Amplifier Frequency Characteristic')
+    axis1.set_title('CB Amplifier Frequency Characteristic')
     formatter1 = EngFormatter(unit='Hz')
     formatter2 = EngFormatter(unit='dB')
     axis1.xaxis.set_major_formatter(formatter1)

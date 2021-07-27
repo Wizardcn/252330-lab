@@ -4,7 +4,7 @@ from ltspice import *
 
 
 def main():
-    filename = '1-2.raw'
+    filename = './ltspice/1-2.raw'
     rawdata = Ltspice(filename)
     rawdata.parse()
 

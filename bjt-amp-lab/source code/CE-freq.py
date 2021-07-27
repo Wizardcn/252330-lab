@@ -5,7 +5,7 @@ from matplotlib.ticker import EngFormatter
 
 def main():
     # read rawdata
-    filename = '1-1.raw'
+    filename = './ltspice/1-1.raw'
     rawdata = Ltspice(filename)
     rawdata.parse()
 
