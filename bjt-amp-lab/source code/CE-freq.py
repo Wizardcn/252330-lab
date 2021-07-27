@@ -35,7 +35,7 @@ def main():
 
     # display data
     plt.tight_layout()
-    plt.savefig(f'{filename[:-4]}-freq.png')
+    plt.savefig(f'./figure/{filename[:-4]}-freq.png')
     plt.show()
 
 

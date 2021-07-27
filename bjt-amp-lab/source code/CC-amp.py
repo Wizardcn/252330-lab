@@ -33,7 +33,7 @@ def main():
     plt.legend(loc='upper left')
 
     plt.tight_layout()
-    plt.savefig(f'{filename[:-4]}.png')
+    plt.savefig(f'./figure/{filename[:-4]}.png')
     plt.show()
 
 
