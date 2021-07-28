@@ -35,8 +35,9 @@ def main():
     axis1.grid(True, which="major", ls="dashed", color='grey')
 
     # display data
-    plt.axhline(y=np.around(1/np.sqrt(2), decimals=3),
-                color='gray', linestyle='--')
+    # plt.axhline(y=np.around(1/np.sqrt(2)*max_vout, decimals=3),
+    #             color='gray', linestyle='--')
+    # plt.axvline(x=)
     plt.tight_layout()
     plt.savefig(f'./figure/{filename[10:][:-4]}-freq.png')
     plt.show()
