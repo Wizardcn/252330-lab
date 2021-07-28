@@ -5,7 +5,7 @@
 ### VCE - IC characteristics
 ![IV char](https://github.com/Wizardcn/252330-lab/blob/master/bjt-char-lab/figure/graphout.png?raw=true)
 ```
-Early Voltage: -94.22 V
+Early Voltage: -98.65 V
 ```
 
 ### CE vout-vin
