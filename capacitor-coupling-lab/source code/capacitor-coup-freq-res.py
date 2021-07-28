@@ -17,6 +17,7 @@ def main():
 
     vout = np.array(vout)
     freq = rawdata.get_frequency()
+    max_vout = np.max(vout)
 
     # vitualize data
     figure, axis1 = plt.subplots(figsize=(8, 4))
@@ -34,6 +35,8 @@ def main():
     axis1.grid(True, which="major", ls="dashed", color='grey')
 
     # display data
+    plt.axhline(y=np.around(1/np.sqrt(2), decimals=3),
+                color='gray', linestyle='--')
     plt.tight_layout()
     plt.savefig(f'./figure/{filename[10:][:-4]}-freq.png')
     plt.show()
