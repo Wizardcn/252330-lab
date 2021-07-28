@@ -26,10 +26,33 @@ def main():
     plt.title('$I_{C}$ - $V_{CE}$ characteristics')
     plt.legend(loc='upper left')
 
+    plt.axvline(x=0.3, color='gray', linestyle='--')
     plt.tight_layout()
     plt.savefig('./figure/graphout.png')
     plt.show()
 
 
+def find_early_voltage():
+    filename = './ltspice/bjt-lab.raw'
+    rawdata = Ltspice(filename)
+    rawdata.parse()
+
+    x_intercept = []
+    for i in range(rawdata.case_count):
+        icq = (rawdata.get_data('Ic(Q1)', i))[30:]
+        vce = (rawdata.get_data('vce', i))[30:]
+        if i == 0:
+            continue
+        g = (np.max(icq) - np.min(icq)) / (np.max(vce) - np.min(vce))
+        x_intercept.append(- ((np.min(icq) - g * np.min(vce)) / g))
+        y_intercept = np.min(icq) - g * np.min(vce)
+        # x = np.linspace(-100, 8, 100)
+        # y = g * x + y_intercept
+        # plt.plot(x, y, linestyle='--')
+    print(f'Early Voltage: {np.around(np.mean(x_intercept), decimals=2)}')
+    # plt.show()
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    find_early_voltage()
