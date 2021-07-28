@@ -49,7 +49,8 @@ def find_early_voltage():
         # x = np.linspace(-100, 8, 100)
         # y = g * x + y_intercept
         # plt.plot(x, y, linestyle='--')
-    print(f'Early Voltage: {np.around(np.mean(x_intercept), decimals=2)}')
+    early_voltage = np.mean(x_intercept)
+    print(f'Early Voltage: {early_voltage:.2f}')
     # plt.show()
 
 
