@@ -15,6 +15,13 @@ def main():
 
     vout = np.array(vout)
     freq = rawdata.get_frequency()
+    max_vout = np.max(vout)
+    vout_3dB = np.max(vout) - 3
+    freq_cutoff_index = np.where(np.around(vout_3dB, decimals=0)
+                                 == np.around(vout, decimals=0))
+    low_cutoff_freq = freq[freq_cutoff_index[0][0]]
+    high_cutoff_freq = freq[freq_cutoff_index[0][2]]
+    print(f'Bandwidth: {high_cutoff_freq - low_cutoff_freq} Hz')
 
     figure, axis1 = plt.subplots(figsize=(8, 4))
     axis1.set_xscale('log')
@@ -30,6 +37,9 @@ def main():
     axis1.xaxis.grid(True, which='minor', ls='dotted', color='lightgrey')
     axis1.grid(True, which='major', ls='dashed', color='grey')
 
+    plt.axhline(y=vout_3dB, color='gray', linestyle='--')
+    plt.axvline(x=low_cutoff_freq, color='gray', linestyle='--')
+    plt.axvline(x=high_cutoff_freq, color='gray', linestyle='--')
     plt.tight_layout()
     plt.savefig(f'./figure/{filename[10:][:-4]}-freq.png')
     plt.show()
@@ -58,5 +68,5 @@ def find_bandwidth():
 
 
 if __name__ == '__main__':
-    # main()
-    find_bandwidth()
+    main()
+    # find_bandwidth()

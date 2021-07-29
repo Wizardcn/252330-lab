@@ -58,5 +58,5 @@ def find_bandwidth():
 
 
 if __name__ == '__main__':
-    # main()
-    find_bandwidth()
+    main()
+    # find_bandwidth()
