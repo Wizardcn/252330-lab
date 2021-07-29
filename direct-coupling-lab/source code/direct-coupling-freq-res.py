@@ -11,12 +11,24 @@ def main():
 
     # prepare data
     raw_vout = np.absolute(rawdata.get_data('V(vout)'))
+    print(raw_vout)
     vout = []
     for data in raw_vout:
         vout.append(20 * np.log10(data))
 
     vout = np.array(vout)
     freq = rawdata.get_frequency()
+    max_vout = np.max(vout)
+    vout_3dB = np.max(vout) - 3
+    freq_cutoff_index = np.where(np.around(vout_3dB, decimals=0)
+                                 == np.around(vout, decimals=0))
+    print(freq_cutoff_index)
+    low_cutoff_freq = freq[freq_cutoff_index[0][0]]
+    high_cutoff_freq = freq[freq_cutoff_index[0][1]]
+    print(
+        f'Bandwidth: {np.around((high_cutoff_freq - low_cutoff_freq) / 1000000, decimals=2)} MHz')
+    print(
+        f'Amplifier gain at midband: {np.around(np.max(raw_vout), decimals=2)}')
 
     # vitualize data
     figure, axis1 = plt.subplots(figsize=(8, 4))
@@ -34,6 +46,9 @@ def main():
     axis1.grid(True, which="major", ls="dashed", color='grey')
 
     # display data
+    plt.axhline(y=vout_3dB, color='gray', linestyle='--')
+    plt.axvline(x=low_cutoff_freq, color='gray', linestyle='--')
+    plt.axvline(x=high_cutoff_freq, color='gray', linestyle='--')
     plt.tight_layout()
     plt.savefig(f'./figure/{filename[10:][:-4]}-freq.png')
     plt.show()
