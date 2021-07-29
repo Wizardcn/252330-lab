@@ -21,7 +21,10 @@ def main():
                                  == np.around(vout, decimals=0))
     low_cutoff_freq = freq[freq_cutoff_index[0][0]]
     high_cutoff_freq = freq[freq_cutoff_index[0][2]]
-    print(f'Bandwidth: {high_cutoff_freq - low_cutoff_freq} Hz')
+    print(
+        f'Bandwidth: {np.around((high_cutoff_freq - low_cutoff_freq) / 1000000, decimals=2)} MHz')
+    print(
+        f'Amplifier gain at midband: {np.around(np.max(raw_vout), decimals=2)}')
 
     figure, axis1 = plt.subplots(figsize=(8, 4))
     axis1.set_xscale('log')
