@@ -1,9 +1,9 @@
-Circuit: * C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\252330 lab\bjt-amp-lab\1-1.asc
+Circuit: * C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\252330 lab\bjt-amp-lab\ltspice\1-1.asc
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Mon Jul 26 14:49:37 2021
-Total elapsed time: 0.284 seconds.
+Date: Thu Jul 29 16:40:48 2021
+Total elapsed time: 0.125 seconds.
 
 tnom = 27
 temp = 27
