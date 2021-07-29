@@ -39,5 +39,28 @@ def main():
     plt.show()
 
 
+def find_bandwidth():
+    filename = './ltspice/1-1.raw'
+    rawdata = Ltspice(filename)
+    rawdata.parse()
+
+    raw_vout = np.absolute(rawdata.get_data('V(vout)'))
+    vout = []
+    for data in raw_vout:
+        vout.append(20 * np.log10(data))
+
+    vout = np.array(vout)
+    freq = rawdata.get_frequency()
+
+    max_vout = np.max(vout)
+    vout_3dB = np.max(vout) - 3
+    freq_cutoff_index = np.where(np.around(vout_3dB, decimals=0)
+                                 == np.around(vout, decimals=0))
+    low_cutoff_freq = freq[freq_cutoff_index[0][0]]
+    high_cutoff_freq = freq[freq_cutoff_index[0][1]]
+    print(f'Bandwidth: {high_cutoff_freq - low_cutoff_freq} Hz')
+
+
 if __name__ == '__main__':
-    main()
+    # main()
+    find_bandwidth()
