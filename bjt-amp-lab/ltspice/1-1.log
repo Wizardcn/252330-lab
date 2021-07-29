@@ -1,9 +1,20 @@
 Circuit: * C:\Users\ASUS\OneDrive - Chiang Mai University\Documents\LTspiceXVII\252330 lab\bjt-amp-lab\ltspice\1-1.asc
 
 Direct Newton iteration for .op point succeeded.
+.step rl=10
+.step rl=1e+007
+.step rl=2e+007
+.step rl=3e+007
+.step rl=4e+007
+.step rl=5e+007
+.step rl=6e+007
+.step rl=7e+007
+.step rl=8e+007
+.step rl=9e+007
+.step rl=1e+008
 
-Date: Thu Jul 29 16:40:48 2021
-Total elapsed time: 0.125 seconds.
+Date: Fri Jul 30 02:24:40 2021
+Total elapsed time: 0.851 seconds.
 
 tnom = 27
 temp = 27
